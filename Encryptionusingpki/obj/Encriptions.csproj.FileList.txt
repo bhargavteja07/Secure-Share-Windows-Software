@@ -1,0 +1,12 @@
+bin\Debug\RSACryptoPad.exe
+bin\Debug\RSACryptoPad.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\RSACryptoPad.App.ico
+obj\Debug\RSACryptoPad.Keys.jpg
+obj\Debug\Encriptions.csproj.GenerateResource.Cache
+obj\Debug\RSACryptoPad.exe
+obj\Debug\RSACryptoPad.pdb
+obj\Debug\Encryption.MainForm.resources
+obj\Debug\Encryption.AboutForm.resources
+obj\Debug\Encryption.KeyPairGeneratorForm.resources
+obj\Debug\RSACryptoPad.frmlogin1.resources

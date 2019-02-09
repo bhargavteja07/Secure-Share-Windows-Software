@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{60EF5B02-C8C2-4D8C-B6F3-B7FAA8B9D0B0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>integration</RootNamespace>
+    <AssemblyName>integration</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EncryptionThread.cs" />
+    <Compile Include="frmDecode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDecode.Designer.cs">
+      <DependentUpon>frmDecode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDecryption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDecryption.designer.cs">
+      <DependentUpon>frmDecryption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmbedFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmbedFile.Designer.cs">
+      <DependentUpon>frmEmbedFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmbedMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmbedMessage.Designer.cs">
+      <DependentUpon>frmEmbedMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEncode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEncode.Designer.cs">
+      <DependentUpon>frmEncode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEncryption.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>frmEncryption.resx</DependentUpon>
+    </Compile>
+    <Compile Include="frmFetchFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFetchFile.Designer.cs">
+      <DependentUpon>frmFetchFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFetchMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFetchMessage.Designer.cs">
+      <DependentUpon>frmFetchMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEncryption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRecieve.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRecieve.Designer.cs">
+      <DependentUpon>frmRecieve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSend.Designer.cs">
+      <DependentUpon>frmSend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KeyPairGeneratorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KeyPairGeneratorForm.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KeyPairGeneratorForm.resx</DependentUpon>
+    </Compile>
+    <Compile Include="main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="main.Designer.cs">
+      <DependentUpon>main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <EmbeddedResource Include="frmDecode.resx">
+      <DependentUpon>frmDecode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDecryption.resx">
+      <DependentUpon>frmDecryption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmbedFile.resx">
+      <DependentUpon>frmEmbedFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmbedMessage.resx">
+      <DependentUpon>frmEmbedMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEncode.resx">
+      <DependentUpon>frmEncode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFetchFile.resx">
+      <DependentUpon>frmFetchFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFetchMessage.resx">
+      <DependentUpon>frmFetchMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEncryption.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmEncryption.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRecieve.resx">
+      <DependentUpon>frmRecieve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSend.resx">
+      <DependentUpon>frmSend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KeyPairGeneratorForm.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>KeyPairGeneratorForm.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main.resx">
+      <DependentUpon>main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enc2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Keys.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %2810%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %2810%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button %287%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button %288%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %287%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %288%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %289%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %2810%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %2811%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %2812%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %2813%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %2814%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %2815%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %2816%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %2817%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %2818%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %2821%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %2822%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %2823%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %2824%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %2825%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %2826%29.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

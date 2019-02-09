@@ -1,0 +1,6 @@
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\RSACryptoPad.AboutForm.resources
+obj\Debug\RSACryptoPad.KeyPairGeneratorForm.resources
+obj\Debug\RSACryptoPad.MainForm.resources
+obj\Debug\Encryption.Properties.Resources.resources
+obj\Debug\Encryption.csproj.GenerateResource.Cache
